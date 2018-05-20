@@ -14,8 +14,10 @@ import java.util.stream.Stream;
 public class FiltroInterfaces {
 
 	/**
-	 * @param args argumentos da linah de comando (args[0]: caminho do arquivo a
-	 * ser analisado)
+	 * @param args argumentos da linah de comando
+	 * 
+	 * args[0]: caminho do arquivo a ser analisado
+	 * args[1]: Se 'S' então imprime a interface física
 	 */
 	public static void main(String[] args) {
 		String fileName;
@@ -48,7 +50,11 @@ public class FiltroInterfaces {
 		} catch (Exception e) {
 			System.out.println("Houve um erro ao processar o arquivo!");
 		}
+		final boolean showPhysical = args.length < 2 ? true : args[1].equalsIgnoreCase("S");
 		list.forEach(phys -> {
+			if (showPhysical) {
+				System.out.println(phys.description);
+			}
 			phys.logicalInterfaces.forEach(logical -> {
 				System.out.println(phys.description + " - " + logical.description);
 			});

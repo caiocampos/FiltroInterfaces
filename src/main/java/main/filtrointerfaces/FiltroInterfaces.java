@@ -1,4 +1,4 @@
-package filtrointerfaces;
+package main.filtrointerfaces;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;

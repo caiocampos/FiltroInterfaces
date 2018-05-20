@@ -1,4 +1,4 @@
-package filtrointerfaces;
+package main.filtrointerfaces;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package filtrointerfaces;
+package main.filtrointerfaces;
 
 /**
  *
